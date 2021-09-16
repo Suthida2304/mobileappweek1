@@ -4,7 +4,6 @@ import 'package:mobileappweek1/screen/index.dart';
 import 'package:mobileappweek1/screen/login.dart';
 import 'package:mobileappweek1/screen/register.dart';
 
-import 'screen/home.dart';
 import 'screen/index.dart';
 
 void main(){
