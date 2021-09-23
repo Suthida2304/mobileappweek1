@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobileappweek1/backend/database.dart';
 import 'package:mobileappweek1/config/constant.dart';
 
 class Register extends StatefulWidget {
@@ -151,11 +152,16 @@ class _RegisterState extends State<Register> {
         ),
         onPressed: () {
           print("OK");
+
+          var local = new DBLocal();
+
           if (formKey.currentState!.validate()) {
             formKey.currentState!.save();
-            print(
-                "Name : $name Surname : $surname Email : $email Password : $password");
+            local.register(name, surname, email, password);
+            //  print(
+            //  "Name : $name Surname : $surname Email : $email Password : $password");
             formKey.currentState!.reset();
+            Navigator.pushNamed(context, 'Login');
           }
         },
         child: Text('Submit'),
