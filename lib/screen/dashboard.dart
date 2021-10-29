@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:mobileappweek1/config/constant.dart';
@@ -28,6 +29,11 @@ class _DashboardState extends State<Dashboard> {
     setState(() {
       data = tctFromJson(response.body);
     });
+  }
+
+  Future<void> logout() async {
+    await FirebaseAuth.instance.signOut();
+    print('True');
   }
 
   @override
@@ -100,6 +106,22 @@ class _DashboardState extends State<Dashboard> {
               onTap: () {
                 print("Menu Location");
                 Navigator.pushNamed(context, 'Location');
+              },
+            ),
+            ListTile(
+              title: Text(
+                "Logout",
+                style: TextStyle(fontSize: 18, color: Colors.red),
+              ),
+              leading: Icon(
+                Icons.logout_outlined,
+                color: Colors.red,
+              ),
+              onTap: () {
+                logout();
+                Navigator.of(context).pop();
+                Navigator.pushNamed(context, 'index', arguments: []);
+                print("Logout Success");
               },
             ),
           ],
