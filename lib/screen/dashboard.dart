@@ -110,17 +110,33 @@ class _DashboardState extends State<Dashboard> {
             ),
             ListTile(
               title: Text(
+                "Store",
+                style: TextStyle(fontSize: 20, color: Colors.brown.shade500),
+              ),
+              leading: Icon(
+                Icons.store_rounded,
+                color: Colors.purpleAccent,
+                size: 35,
+              ),
+              onTap: () {
+                print("Menu Store");
+                Navigator.pushNamed(context, 'Store');
+              },
+            ),
+            ListTile(
+              title: Text(
                 "Logout",
-                style: TextStyle(fontSize: 18, color: Colors.red),
+                style: TextStyle(fontSize: 20, color: Colors.brown.shade500),
               ),
               leading: Icon(
                 Icons.logout_outlined,
                 color: Colors.red,
+                size: 35,
               ),
               onTap: () {
                 logout();
                 Navigator.of(context).pop();
-                Navigator.pushNamed(context, 'index', arguments: []);
+                Navigator.pushNamed(context, 'Index', arguments: []);
                 print("Logout Success");
               },
             ),
