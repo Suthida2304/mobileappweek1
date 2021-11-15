@@ -1,7 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
-import 'package:mobileappweek1/config/constant.dart';
 
 class Viewdata extends StatefulWidget {
   const Viewdata({Key? key}) : super(key: key);
@@ -20,7 +19,7 @@ class _ViewdataState extends State<Viewdata> {
       dbfirebase
           .child(key)
           .update({
-            'status': "ขายแล้ว",
+            'status': "จองแล้ว",
           })
           .then((value) => print('Success'))
           .catchError((onError) {
@@ -34,56 +33,69 @@ class _ViewdataState extends State<Viewdata> {
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: FirebaseAnimatedList(
-        query: dbfirebase,
-        itemBuilder: (context, snapshot, animation, index) {
-          return Container(
-            height: 100,
-            child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Card(
-                elevation: 5,
-                child: ListTile(
-                  leading: CircleAvatar(
-                    child: Icon(Icons.food_bank_outlined),
-                    backgroundColor: pColor,
-                  ),
-                  title: Text('${snapshot.value['product']}'),
-                  subtitle: Row(
-                    children: [
-                      Text("Price " + '${snapshot.value['price']}'),
-                      Text(" Status " + '${snapshot.value['status']}'),
-                    ],
-                  ),
-                  trailing: Column(
-                    children: [
-                      Expanded(
-                        child: IconButton(
-                          icon: Icon(Icons.delete),
-                          onPressed: () {
-                            print('ลบข้อมูล');
-                            dbfirebase.child(snapshot.key!).remove();
-                          },
-                        ),
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("asset/image/bgview.jpg"),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: Flexible(
+        child: FirebaseAnimatedList(
+          query: dbfirebase,
+          itemBuilder: (context, snapshot, animation, index) {
+            return Container(
+              height: 100,
+              child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      child: Icon(
+                        Icons.car_repair,
+                        size: 30,
                       ),
-                      Expanded(
-                        child: IconButton(
-                          icon: Icon(Icons.edit),
-                          onPressed: () {
-                            print('แก้ไขข้อมูล');
-                            print(snapshot.key!);
-                            updateData(snapshot.key!);
-                          },
+                      backgroundColor: Colors.black,
+                    ),
+                    title: Text('${snapshot.value['name']}'),
+                    subtitle: Row(
+                      children: [
+                        //Text("Address " + '${snapshot.value['address']}'),
+                        //Text("Tel " + '${snapshot.value['tel']}'),
+                        // Text("Date " + '${snapshot.value['date']}'),
+                        Text(" Status " + '${snapshot.value['status']}'),
+                      ],
+                    ),
+                    trailing: Column(
+                      children: [
+                        Expanded(
+                          child: IconButton(
+                            icon: Icon(Icons.delete),
+                            onPressed: () {
+                              print('ลบข้อมูล');
+                              dbfirebase.child(snapshot.key!).remove();
+                            },
+                          ),
                         ),
-                      ),
-                    ],
+                        Expanded(
+                          child: IconButton(
+                            icon: Icon(Icons.edit),
+                            onPressed: () {
+                              print('แก้ไขข้อมูล');
+                              print(snapshot.key!);
+                              updateData(snapshot.key!);
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }

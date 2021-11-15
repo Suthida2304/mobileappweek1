@@ -17,22 +17,31 @@ class _FirebaseRegisterState extends State<FirebaseRegister> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('Register Firebase'),
-        ),
-        body: Form(
-          key: formKey,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                // txtName(),
-                // txtSurname(),
-                txtEmail(),
-                txtPassword(),
-                btnSubmit(),
-              ],
+    return Container(
+      child: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.black,
+            title: Text('Register Premium Car Rental'),
+          ),
+          body: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("asset/image/bgregis.jpg"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Form(
+              key: formKey,
+              child: Column(
+                children: [
+                  // txtName(),
+                  // txtSurname(),
+                  txtEmail(),
+                  txtPassword(),
+                  btnSubmit(),
+                ],
+              ),
             ),
           ),
         ),
@@ -99,11 +108,14 @@ class _FirebaseRegisterState extends State<FirebaseRegister> {
         keyboardType: TextInputType.emailAddress,
         style: TextStyle(
           fontSize: 24,
-          color: pColor,
+          color: Colors.black,
         ),
         decoration: InputDecoration(
-          labelText: 'Email:',
-          icon: Icon(Icons.email),
+          labelText: 'Email :',
+          icon: Icon(
+            Icons.email,
+            size: 35,
+          ),
           hintText: 'Input your email',
         ),
         validator: (value) {
@@ -127,11 +139,14 @@ class _FirebaseRegisterState extends State<FirebaseRegister> {
         obscureText: true,
         style: TextStyle(
           fontSize: 24,
-          color: pColor,
+          color: Colors.black,
         ),
         decoration: InputDecoration(
-          labelText: 'Password:',
-          icon: Icon(Icons.lock),
+          labelText: 'Password :',
+          icon: Icon(
+            Icons.lock,
+            size: 35,
+          ),
           hintText: 'Input your password',
         ),
         onSaved: (value) {
@@ -143,7 +158,8 @@ class _FirebaseRegisterState extends State<FirebaseRegister> {
 
   Widget btnSubmit() => ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: pColor,
+          padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+          primary: Colors.grey[500],
         ),
         onPressed: () {
           if (formKey.currentState!.validate()) {
@@ -151,7 +167,14 @@ class _FirebaseRegisterState extends State<FirebaseRegister> {
             registerFirbase();
           }
         },
-        child: Text('Submit'),
+        child: Text(
+          'ตกลง',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
       );
 
   Future<void> registerFirbase() async {

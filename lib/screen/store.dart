@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobileappweek1/config/constant.dart';
 import 'package:mobileappweek1/screen/Store/adddata.dart';
 import 'package:mobileappweek1/screen/Store/viewdata.dart';
 
@@ -17,7 +16,13 @@ class _StoreState extends State<Store> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Store"),
+          backgroundColor: Colors.grey[800],
+          title: Text(
+            "Store",
+            style: TextStyle(
+              fontSize: 30,
+            ),
+          ),
         ),
         body: TabBarView(
           children: [
@@ -26,10 +31,10 @@ class _StoreState extends State<Store> {
           ],
         ),
         bottomNavigationBar: Container(
-          color: sColor,
+          color: Colors.grey[800],
           child: TabBar(
-            indicatorColor: Colors.deepPurpleAccent,
-            labelColor: Colors.red,
+            indicatorColor: Colors.lightBlue,
+            labelColor: Colors.white,
             tabs: [
               Tab(
                 text: "Add DATA",

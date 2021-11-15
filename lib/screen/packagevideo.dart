@@ -14,13 +14,14 @@ class _PackagevideoState extends State<PackageVideo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[400],
       appBar: AppBar(
         title: Text('Video'),
-        backgroundColor: pColor,
+        backgroundColor: Colors.black87,
       ),
       body: Center(
         child: BetterPlayer.network(
-          "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4",
+          "https://cdn.videvo.net/videvo_files/video/free/2018-12/large_watermarked/180607_A_090_preview.mp4",
           betterPlayerConfiguration: BetterPlayerConfiguration(autoPlay: true),
         ),
       ),

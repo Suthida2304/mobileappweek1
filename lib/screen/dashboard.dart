@@ -125,6 +125,24 @@ class _DashboardState extends State<Dashboard> {
             ),
             ListTile(
               title: Text(
+                'Showroom',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.brown.shade500,
+                ),
+              ),
+              leading: Icon(
+                Icons.car_rental_outlined,
+                color: Colors.orange,
+                size: 35,
+              ),
+              onTap: () {
+                print("Menu Showroom");
+                Navigator.pushNamed(context, 'Showroom');
+              },
+            ),
+            ListTile(
+              title: Text(
                 "Logout",
                 style: TextStyle(fontSize: 20, color: Colors.brown.shade500),
               ),
