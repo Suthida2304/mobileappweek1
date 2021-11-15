@@ -61,10 +61,10 @@ class _ViewdataState extends State<Viewdata> {
                     title: Text('${snapshot.value['name']}'),
                     subtitle: Row(
                       children: [
-                        //Text("Address " + '${snapshot.value['address']}'),
+                        Text(" Carmodel: " + '${snapshot.value['carmodel']}'),
                         //Text("Tel " + '${snapshot.value['tel']}'),
-                        // Text("Date " + '${snapshot.value['date']}'),
-                        Text(" Status " + '${snapshot.value['status']}'),
+                        //Text("Date " + '${snapshot.value['date']}'),
+                        Text(" Status: " + '${snapshot.value['status']}'),
                       ],
                     ),
                     trailing: Column(
