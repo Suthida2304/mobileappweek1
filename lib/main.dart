@@ -9,8 +9,6 @@ import 'package:mobileappweek1/screen/dashboard.dart';
 import 'package:mobileappweek1/screen/firebaselogin.dart';
 import 'package:mobileappweek1/screen/firebaseregister.dart';
 import 'package:mobileappweek1/screen/index.dart';
-import 'package:mobileappweek1/screen/packageimage.dart';
-import 'package:mobileappweek1/screen/packagelocal.dart';
 import 'package:mobileappweek1/screen/packagevideo.dart';
 import 'package:mobileappweek1/screen/store.dart';
 import 'screen/index.dart';
