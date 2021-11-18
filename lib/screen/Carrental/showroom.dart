@@ -28,7 +28,9 @@ class _ShowroomState extends State<Showroom> {
     });
   }
 
+  //สร้างฟังชั่นดึงข้อมูลชื่อกับภาพจากไฟล์ดาต้า
   List<Car> cars = getCarList();
+  //สร้างฟังชั่นดึงข้อมูลภาพร้านอื่นจากไฟล์ดาต้า
   List<Dealer> dealers = getDealerList();
 
   Future<void> logout() async {
@@ -273,6 +275,8 @@ class _ShowroomState extends State<Showroom> {
                         children: buildDeals(),
                       ),
                     ),
+
+                    //linkไปหน้า avilable
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -411,7 +415,6 @@ class _ShowroomState extends State<Showroom> {
     );
   }
 
-//คำสั่งแถบเลือนเมนู ไปซ้ายขวา
   List<Widget> buildDeals() {
     List<Widget> list = [];
     for (var i = 0; i < cars.length; i++) {

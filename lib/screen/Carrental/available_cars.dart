@@ -49,7 +49,7 @@ class _AvailableCarsState extends State<AvailableCars> {
                       color: Colors.black12,
                       width: 1,
                     ),
-                  ),
+                  ), //Iconย้อนกลับ
                   child: Icon(
                     Icons.keyboard_arrow_left,
                     color: Colors.black,
@@ -60,6 +60,7 @@ class _AvailableCarsState extends State<AvailableCars> {
               SizedBox(
                 height: 16,
               ),
+              //ดึงจำนวนรุ่นรถมาจากไฟล์data
               Text(
                 "Available Cars(" + getCarList().length.toString() + ")",
                 style: TextStyle(

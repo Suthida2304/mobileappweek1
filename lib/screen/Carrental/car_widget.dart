@@ -33,6 +33,7 @@ Widget buildCar(Car car, int index) {
                 horizontal: 8,
                 vertical: 4,
               ),
+              //ดึงข้อมูล weekly มาใช้
               child: Text(
                 car.condition,
                 style: TextStyle(
@@ -47,6 +48,8 @@ Widget buildCar(Car car, int index) {
         SizedBox(
           height: 8,
         ),
+
+        //ดึงภาพมา
         Container(
           height: 120,
           child: Center(
@@ -62,6 +65,7 @@ Widget buildCar(Car car, int index) {
         SizedBox(
           height: 24,
         ),
+        //ดึงรุ่นรถมา
         Text(
           car.model,
           style: TextStyle(
@@ -71,6 +75,7 @@ Widget buildCar(Car car, int index) {
         SizedBox(
           height: 8,
         ),
+        //ดึงยี่ห้อรถมา
         Text(
           car.brand,
           style: TextStyle(

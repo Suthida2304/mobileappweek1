@@ -115,6 +115,7 @@ class _FirebaseRegisterState extends State<FirebaseRegister> {
           icon: Icon(
             Icons.email,
             size: 35,
+            color: Colors.black,
           ),
           hintText: 'Input your email',
         ),
@@ -146,6 +147,7 @@ class _FirebaseRegisterState extends State<FirebaseRegister> {
           icon: Icon(
             Icons.lock,
             size: 35,
+            color: Colors.black,
           ),
           hintText: 'Input your password',
         ),

@@ -37,10 +37,10 @@ class _StoreState extends State<Store> {
             labelColor: Colors.white,
             tabs: [
               Tab(
-                text: "Add DATA",
+                text: "เพิ่มข้อมูลการจอง ",
               ),
               Tab(
-                text: "View DATA",
+                text: "ดูสถานะการจอง",
               ),
             ],
           ),

@@ -77,7 +77,7 @@ class _AdddataState extends State<Adddata> {
           color: Colors.black,
         ),
         decoration: InputDecoration(
-          labelText: 'Carmodel : ',
+          labelText: 'รุ่นรถ : ',
           icon: Icon(
             Icons.car_repair_sharp,
             color: Colors.grey[800],
@@ -108,7 +108,7 @@ class _AdddataState extends State<Adddata> {
           color: Colors.black,
         ),
         decoration: InputDecoration(
-          labelText: 'Name : ',
+          labelText: 'ชื่อผู้จอง : ',
           icon: Icon(
             Icons.supervised_user_circle_rounded,
             color: Colors.grey[800],
@@ -139,7 +139,7 @@ class _AdddataState extends State<Adddata> {
           color: Colors.black,
         ),
         decoration: InputDecoration(
-          labelText: 'Surename : ',
+          labelText: 'นามสกุลผู้จอง : ',
           icon: Icon(
             Icons.supervised_user_circle_rounded,
             color: Colors.grey[800],
@@ -170,7 +170,7 @@ class _AdddataState extends State<Adddata> {
           color: Colors.black,
         ),
         decoration: InputDecoration(
-          labelText: 'Address : ',
+          labelText: 'สถานที่นัดรับรถ : ',
           icon: Icon(
             Icons.local_activity_rounded,
             color: Colors.grey[800],
@@ -202,7 +202,7 @@ class _AdddataState extends State<Adddata> {
           color: Colors.black,
         ),
         decoration: InputDecoration(
-          labelText: 'Tel : ',
+          labelText: 'เบอร์โทร : ',
           icon: Icon(
             Icons.ten_mp_rounded,
             color: Colors.grey[800],
@@ -228,7 +228,7 @@ class _AdddataState extends State<Adddata> {
           color: Colors.black,
         ),
         decoration: InputDecoration(
-          labelText: 'Date : ',
+          labelText: 'วันที่จอง : ',
           icon: Icon(
             Icons.date_range_rounded,
             color: Colors.grey[800],
@@ -253,7 +253,7 @@ class _AdddataState extends State<Adddata> {
           color: Colors.black,
         ),
         decoration: InputDecoration(
-          labelText: 'Status :',
+          labelText: 'สถานะการจอง :',
           icon: Icon(
             Icons.stay_current_portrait_sharp,
             color: Colors.grey[800],

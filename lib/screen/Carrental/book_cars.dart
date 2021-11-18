@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobileappweek1/screen/Carrental/data.dart';
-import 'package:mobileappweek1/screen/Store/adddata.dart';
 
 class BookCar extends StatefulWidget {
   // const BookCar ({Key? key}) : super(key: key);
@@ -370,7 +369,7 @@ class _BookCarState extends State<BookCar> {
                     Navigator.pushNamed(context, 'Store');
                   },
                   child: Text(
-                    "Book this car",
+                    "จองรถคันนี้",
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
